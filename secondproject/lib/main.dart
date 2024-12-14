@@ -34,34 +34,54 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('Flutter container'),
-      ),
-      // body: Container(
-      //   width: 100,
-      //   height: 100,
-      //   color: Colors.lightGreenAccent,
-      //   child: Text('Hello Worlds'),
-      // ),
-      // //container
-      // body: Text('Hello Flutter',
-      //     style: TextStyle(
-      //       fontSize: 18,
-      //       color: Colors.indigo,
-      //       fontWeight: FontWeight.bold,
-      //       backgroundColor: Colors.lightGreenAccent,
-      //     )
-      //     )
-      //     );
-      body: Center(
-        child: Container(
-          width: 150,
-          height: 150,
-          color: Colors.lightGreenAccent,
-          child: Center(child: Text('Hello Worlds')),
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          title: Text('Flutter container'),
         ),
-      ),
-    );
+        // body: Container(
+        //   width: 100,
+        //   height: 100,
+        //   color: Colors.lightGreenAccent,
+        //   child: Text('Hello Worlds'),
+        // ),
+        // //container
+        // body: Text('Hello Flutter',
+        //     style: TextStyle(
+        //       fontSize: 18,
+        //       color: Colors.indigo,
+        //       fontWeight: FontWeight.bold,
+        //       backgroundColor: Colors.lightGreenAccent,
+        //     )
+        //     )
+        //     );
+        //   body: Center(
+        //     child: Container(
+        //       width: 150,
+        //       height: 150,
+        //       color: Colors.lightGreenAccent,
+        //       child: Center(child: Text('Hello Worlds')),
+        //     ),
+        //   ),
+        // body: TextButton(
+        //   onPressed: () {
+        //     print('Button Clicked');
+        //   },
+        //   child: Text('Click Me'),
+        //   onLongPress: () {
+        //     print('Long Pressed');
+        //   },
+        // ) //textbutton
+        // body: ElevatedButton(
+        //     onPressed: () {
+        //       print('Button Clicked');
+        //     },
+        //     child: Text('Click Me')) //elevatedbutton
+        body: OutlinedButton(
+            onPressed: () {
+              print('Button Clicked');
+            },
+            child: Text('Click Me')) //outlinedbutton
+
+        );
   }
 }
