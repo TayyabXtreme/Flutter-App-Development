@@ -49,8 +49,20 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Container(
           width: 100,
           height: 100,
-          color: Colors.lightGreenAccent,
-          child: Text('Hello World'),
+          decoration: BoxDecoration(
+              color: Colors.lightGreenAccent,
+              //borderRadius: BorderRadius.circular(10),
+              border: Border.all(color: Colors.black, width: 2),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.greenAccent,
+                  blurRadius: 5,
+                  offset: Offset(-2, 2),
+                  spreadRadius: 2,
+                ),
+              ],
+              shape: BoxShape.circle),
+          child: Center(child: Text('Hello World')),
         )),
       ),
     );
