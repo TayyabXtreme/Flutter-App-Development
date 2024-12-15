@@ -184,6 +184,37 @@ class _MyHomePageState extends State<MyHomePage> {
         ///
         ///
         ///
-        body: Text('Hello'));
+        // body: Center(
+        //     child: CircleAvatar(
+        //   radius: 100,
+        //   backgroundColor: Colors.red,
+        //   backgroundImage: AssetImage('assets/images/gojo.jpeg'),
+        //   child: Text(
+        //     'Gojo Saturo',
+        //     style: TextStyle(color: Colors.white, fontSize: 21),
+        //   ),
+        // ))
+        //
+        //
+        //
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        /////////////////////////custom fonts
+
+        body: Center(
+            child: Text(
+          'Hello World',
+          style: TextStyle(
+              fontFamily: 'fontMain',
+              fontWeight: FontWeight.w500,
+              fontSize: 24,
+              fontStyle: FontStyle.italic),
+        )));
   }
 }
