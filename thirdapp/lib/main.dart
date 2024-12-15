@@ -13,6 +13,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        textTheme: TextTheme(
+            headlineLarge: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+            labelLarge: TextStyle(
+                fontSize: 16, fontWeight: FontWeight.w300, color: Colors.pink)),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
@@ -207,14 +211,81 @@ class _MyHomePageState extends State<MyHomePage> {
         ///
         /////////////////////////custom fonts
 
+        // body: Center(
+        //     child: Text(
+        //   'Hello World',
+        //   style: TextStyle(
+        //       fontFamily: 'fontMain',
+        //       fontWeight: FontWeight.w500,
+        //       fontSize: 24,
+        //       fontStyle: FontStyle.italic),
+        // ))
+        //
+        //
+        //
+        //
+        //
+        ///////////////////////Text Theme
+        ///
+        ///
+        // body: Column(
+        //   children: [
+        //     Text('HEllo World',
+        //         style: Theme.of(context).textTheme.headlineLarge),
+        //     Text('HEllo World'),
+        //     Text('HEllo World',
+        //         style: Theme.of(context)
+        //             .textTheme
+        //             .labelLarge!
+        //             .copyWith(color: Colors.red)),
+        //     Text('HEllo World')
+        //   ],
+        // )
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        ///////////////////Card Widget
+        ///
+        ///
+        ///
+        ///
+        // body: Center(
+        //     child: Card(
+        //         color: Colors.yellow,
+        //         shadowColor: Colors.blue,
+        //         elevation: 12,
+        //         child: Padding(
+        //             padding: EdgeInsets.all(20),
+        //             child: Text(
+        //               'HEllo card Widget',
+        //               style:
+        //                   TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        //             ))))
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        ///////////////////////////Text Input
+        ///
+        ///
+        ///
+        ///
         body: Center(
-            child: Text(
-          'Hello World',
-          style: TextStyle(
-              fontFamily: 'fontMain',
-              fontWeight: FontWeight.w500,
-              fontSize: 24,
-              fontStyle: FontStyle.italic),
-        )));
+            child: Container(
+                width: 300,
+                child: TextField(
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.yellow),
+                          borderRadius: BorderRadius.circular(20))),
+                ))));
   }
 }
