@@ -37,6 +37,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    var email = TextEditingController();
+    var time = DateTime.now();
     var arrNames = [
       'ali',
       'Tayyab',
@@ -278,14 +280,93 @@ class _MyHomePageState extends State<MyHomePage> {
         ///
         ///
         ///
+        // body: Center(
+        //     child: SizedBox(
+        //         width: 300,
+        //         child: Column(
+        //             mainAxisAlignment: MainAxisAlignment.center,
+        //             children: [
+        //               TextField(
+        //                 decoration: InputDecoration(
+        //                     border: OutlineInputBorder(
+        //                         borderSide: BorderSide(color: Colors.yellow),
+        //                         borderRadius: BorderRadius.circular(20))),
+        //               ),
+        //               Container(
+        //                 height: 11,
+        //               ),
+        //               TextField(
+        //                 controller: email,
+        //                 // enabled: false,
+        //                 decoration: InputDecoration(
+        //                     focusedBorder: OutlineInputBorder(
+        //                         borderSide:
+        //                             BorderSide(color: Colors.yellow, width: 3),
+        //                         borderRadius: BorderRadius.circular(20)),
+        //                     enabledBorder: OutlineInputBorder(
+        //                       borderSide:
+        //                           BorderSide(color: Colors.orange, width: 3),
+        //                       borderRadius: BorderRadius.circular(20),
+        //                     ),
+        //                     disabledBorder: OutlineInputBorder(
+        //                       borderSide:
+        //                           BorderSide(color: Colors.red, width: 3),
+        //                       borderRadius: BorderRadius.circular(20),
+        //                     ),
+        //                     suffixText: "username text",
+        //                     suffixIcon: IconButton(
+        //                         onPressed: () {},
+        //                         icon: Icon(
+        //                           Icons.remove_red_eye,
+        //                           color: Colors.orange,
+        //                         )),
+        //                     prefixIcon: IconButton(
+        //                         onPressed: () {},
+        //                         icon: Icon(Icons.add_a_photo))),
+        //               ),
+        //               ElevatedButton(
+        //                   onPressed: () {
+        //                     String uname = email.text.toString();
+        //                     print("Email is $uname");
+        //                   },
+        //                   child: Text('Click Here'))
+        //             ])))
+        //
+        //
+        //
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        /////////////////////current Data and Time
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
         body: Center(
-            child: Container(
-                width: 300,
-                child: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.yellow),
-                          borderRadius: BorderRadius.circular(20))),
-                ))));
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Text('Data and time ${time.timeZoneName}  '),
+          ElevatedButton(
+              onPressed: () {
+                setState(() {});
+              },
+              child: Text('Current time'))
+        ])));
   }
 }
