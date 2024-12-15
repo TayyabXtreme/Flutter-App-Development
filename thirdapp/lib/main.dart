@@ -413,27 +413,79 @@ class _MyHomePageState extends State<MyHomePage> {
         //
         //
         //
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Select Date ${datePicked}',
-                style: TextStyle(fontSize: 25),
-              ),
-              ElevatedButton(
-                  onPressed: () async {
-                    datePicked = await showDatePicker(
-                        context: context,
-                        initialDate: DateTime.now(),
-                        firstDate: DateTime(2021),
-                        lastDate: DateTime(2025));
+        // body: Center(
+        //   child: Column(
+        //     mainAxisAlignment: MainAxisAlignment.center,
+        //     children: [
+        //       Text(
+        //         'Select Date ${datePicked}',
+        //         style: TextStyle(fontSize: 25),
+        //       ),
+        //       ElevatedButton(
+        //           onPressed: () async {
+        //             datePicked = await showDatePicker(
+        //                 context: context,
+        //                 initialDate: DateTime.now(),
+        //                 firstDate: DateTime(2021),
+        //                 lastDate: DateTime(2025));
 
-                    setState(() {});
-                  },
-                  child: Text('Hello'))
-            ],
-          ),
+        //             setState(() {});
+        //           },
+        //           child: Text('Hello'))
+        //     ],
+        //   ),
+        // )
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        ///////////////////Grid View
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        body: GridView.count(
+          crossAxisCount: 3,
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
+          children: [
+            Container(
+              color: Colors.red,
+            ),
+            Container(
+              color: Colors.blue,
+            ),
+            Container(
+              color: Colors.green,
+            ),
+            Container(color: Colors.pink),
+            Container(
+              color: Colors.yellow,
+            ),
+            Container(
+              color: Colors.brown,
+            ),
+            Container(
+              color: Colors.purple,
+            ),
+            Container(
+              color: Colors.orange,
+            )
+          ],
         ));
   }
 }
