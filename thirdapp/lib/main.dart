@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,6 +38,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    DateTime? datePicked;
     var email = TextEditingController();
     var time = DateTime.now();
     var arrNames = [
@@ -358,15 +360,80 @@ class _MyHomePageState extends State<MyHomePage> {
         ///
         ///
         ///
+        // body: Center(
+        //     child:
+        //         Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        //   Text('Data and time ${time.timeZoneName}  '),
+        //   ElevatedButton(
+        //       onPressed: () {
+        //         setState(() {});
+        //       },
+        //       child: Text('Current time'))
+        // ]))
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        // Date Format pattern
+
+        // body: Center(
+        //     child: InkWell(
+        //   onLongPress: () => {setState(() {})},
+        //   child: Container(
+        //     width: 200,
+        //     height: 200,
+        //     child: Column(
+        //       children: [
+        //         Text('Current time :${DateFormat('jms').format(time)}')
+        //       ],
+        //     ),
+        //   ),
+        // ))
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //                  Date Time picker
+        //
+        //
+        //
         body: Center(
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text('Data and time ${time.timeZoneName}  '),
-          ElevatedButton(
-              onPressed: () {
-                setState(() {});
-              },
-              child: Text('Current time'))
-        ])));
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Select Date ${datePicked}',
+                style: TextStyle(fontSize: 25),
+              ),
+              ElevatedButton(
+                  onPressed: () async {
+                    datePicked = await showDatePicker(
+                        context: context,
+                        initialDate: DateTime.now(),
+                        firstDate: DateTime(2021),
+                        lastDate: DateTime(2025));
+
+                    setState(() {});
+                  },
+                  child: Text('Hello'))
+            ],
+          ),
+        ));
   }
 }
