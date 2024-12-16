@@ -548,14 +548,39 @@ class _MyHomePageState extends State<MyHomePage> {
         //
         ///////////////// creating a curom widget
 
-        body: RoundedBtn(
-          btname: 'Click Here',
-          icon: Icon(Icons.add),
-          callback: () {
-            print('Logged in');
-          },
-          textStyle: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
-          bgcolor: Colors.deepOrange,
+        // body: RoundedBtn(
+        //   btname: 'Click Here',
+        //   icon: Icon(Icons.add),
+        //   callback: () {
+        //     print('Logged in');
+        //   },
+        //   textStyle: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+        //   bgcolor: Colors.deepOrange,
+        // )
+        //
+        //
+        //
+        //
+        //
+
+        // Stack Vidget
+
+        body: Stack(
+          children: [
+            Container(
+              width: 200,
+              height: 200,
+              color: Colors.blueGrey,
+            ),
+            Positioned(
+                left: 20,
+                top: 20,
+                child: Container(
+                  width: 160,
+                  height: 160,
+                  color: Colors.grey,
+                ))
+          ],
         ));
   }
 }
