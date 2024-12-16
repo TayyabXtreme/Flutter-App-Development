@@ -565,21 +565,66 @@ class _MyHomePageState extends State<MyHomePage> {
 
         // Stack Vidget
 
-        body: Stack(
+        // body: Stack(
+        //   children: [
+        //     Container(
+        //       width: 200,
+        //       height: 200,
+        //       color: Colors.blueGrey,
+        //     ),
+        //     Positioned(
+        //         left: 20,
+        //         top: 20,
+        //         child: Container(
+        //           width: 160,
+        //           height: 160,
+        //           color: Colors.grey,
+        //         ))
+        //   ],
+        // )
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        //
+        //
+
+        ////Wraped wridget
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        body: Wrap(
+          direction: Axis.horizontal,
+          runSpacing: 11,
+          spacing: 11,
           children: [
             Container(
-              width: 200,
-              height: 200,
-              color: Colors.blueGrey,
+              width: 100,
+              height: 400,
+              color: Colors.amber,
             ),
-            Positioned(
-                left: 20,
-                top: 20,
-                child: Container(
-                  width: 160,
-                  height: 160,
-                  color: Colors.grey,
-                ))
+            Container(
+              width: 100,
+              height: 400,
+              color: Colors.red,
+            ),
+            Container(
+              width: 100,
+              height: 400,
+              color: Colors.purpleAccent,
+            ),
+            Container(
+              width: 100,
+              height: 400,
+              color: Colors.blueGrey,
+            )
           ],
         ));
   }
