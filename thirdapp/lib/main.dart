@@ -640,18 +640,48 @@ class _MyHomePageState extends State<MyHomePage> {
         ///
         ///
         ///
-        body: Center(
-            child: SizedBox(
-                width: 200,
-                height: 100,
-                child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.red,
-                    ),
-                    onPressed: () {
-                      print('Hello World');
-                    },
-                    child: Text('Click Here')))));
+        // body: Center(
+        //     child: SizedBox(
+        //         width: 200,
+        //         height: 100,
+        //         child: ElevatedButton(
+        //             style: ElevatedButton.styleFrom(
+        //               backgroundColor: Colors.red,
+        //             ),
+        //             onPressed: () {
+        //               print('Hello World');
+        //             },
+        //             child: Text('Click Here'))))
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        ////////////////Rich Text
+        ///
+        ///
+        ///
+        ///
+        ///
+        body: RichText(
+            text: TextSpan(
+                style: TextStyle(color: Colors.grey, fontSize: 24),
+                children: [
+              TextSpan(text: 'Hsello'),
+              TextSpan(
+                  // spellOut: true,
+                  text: '!World',
+                  style: TextStyle(
+                      color: Colors.blue,
+                      fontSize: 34,
+                      fontWeight: FontWeight.bold))
+            ])));
   }
 }
 
