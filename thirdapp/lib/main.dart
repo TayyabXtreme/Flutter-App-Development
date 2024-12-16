@@ -600,33 +600,58 @@ class _MyHomePageState extends State<MyHomePage> {
         ///
         ///
         ///
-        body: Wrap(
-          direction: Axis.horizontal,
-          runSpacing: 11,
-          spacing: 11,
-          children: [
-            Container(
-              width: 100,
-              height: 400,
-              color: Colors.amber,
-            ),
-            Container(
-              width: 100,
-              height: 400,
-              color: Colors.red,
-            ),
-            Container(
-              width: 100,
-              height: 400,
-              color: Colors.purpleAccent,
-            ),
-            Container(
-              width: 100,
-              height: 400,
-              color: Colors.blueGrey,
-            )
-          ],
-        ));
+        // body: Wrap(
+        //   direction: Axis.horizontal,
+        //   runSpacing: 11,
+        //   spacing: 11,
+        //   children: [
+        //     Container(
+        //       width: 100,
+        //       height: 400,
+        //       color: Colors.amber,
+        //     ),
+        //     Container(
+        //       width: 100,
+        //       height: 400,
+        //       color: Colors.red,
+        //     ),
+        //     Container(
+        //       width: 100,
+        //       height: 400,
+        //       color: Colors.purpleAccent,
+        //     ),
+        //     Container(
+        //       width: 100,
+        //       height: 400,
+        //       color: Colors.blueGrey,
+        //     )
+        //   ],
+        // )
+        //
+        //
+        //
+        ///
+        ///
+        ///
+        ///
+        /////////////////////Sized Widget
+        ///
+        ///
+        ///
+        ///
+        ///
+        body: Center(
+            child: SizedBox(
+                width: 200,
+                height: 100,
+                child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.red,
+                    ),
+                    onPressed: () {
+                      print('Hello World');
+                    },
+                    child: Text('Click Here')))));
   }
 }
 
