@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thirdapp/widgets/rounded_Btn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -520,24 +521,42 @@ class _MyHomePageState extends State<MyHomePage> {
         ///
         ///
         ///
-        body: Column(
-          children: [
-            CatItems(),
-            Messages(),
-            Expanded(
-                flex: 2,
-                child: Container(
-                  color: Colors.blue,
-                )),
-            Expanded(
-                child: Container(
-              color: Colors.yellow,
-            )),
-          ],
-        )
+        // body: Column(
+        //   children: [
+        //     CatItems(),
+        //     Messages(),
+        //     Expanded(
+        //         flex: 2,
+        //         child: Container(
+        //           color: Colors.blue,
+        //         )),
+        //     Expanded(
+        //         child: Container(
+        //       color: Colors.yellow,
+        //     )),
+        //   ],
+        // )
 
+        // //
         //
-        );
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        ///////////////// creating a curom widget
+
+        body: RoundedBtn(
+          btname: 'Click Here',
+          icon: Icon(Icons.add),
+          callback: () {
+            print('Logged in');
+          },
+          textStyle: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+          bgcolor: Colors.deepOrange,
+        ));
   }
 }
 
