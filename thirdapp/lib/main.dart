@@ -499,6 +499,101 @@ class _MyHomePageState extends State<MyHomePage> {
         ///
         ///
         ///
-        body: ElevatedButton(onPressed: callback, child: Text('Click me')));
+        // body: ElevatedButton(onPressed: callback, child: Text('Click me'))
+        //
+        //
+        //
+        //
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        //////////////////////Splitting Widgets
+        ///
+        ///
+        ///
+        ///
+        ///
+        body: Column(
+          children: [
+            CatItems(),
+            Messages(),
+            Expanded(
+                flex: 2,
+                child: Container(
+                  color: Colors.blue,
+                )),
+            Expanded(
+                child: Container(
+              color: Colors.yellow,
+            )),
+          ],
+        )
+
+        //
+        );
+  }
+}
+
+class CatItems extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+        flex: 2,
+        child: Container(
+            color: Colors.red,
+            child: ListView.builder(
+              itemBuilder: (context, index) => Padding(
+                  padding: EdgeInsets.all(8),
+                  child: SizedBox(
+                    width: 100,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.orange,
+                    ),
+                  )),
+              itemCount: 5,
+              scrollDirection: Axis.horizontal,
+            )));
+  }
+}
+
+class Messages extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Expanded(
+        flex: 5,
+        child: Container(
+            color: Colors.green,
+            child: ListView.builder(
+              itemBuilder: (context, index) {
+                var images = [
+                  'assets/images/gojo.jpeg',
+                  'assets/images/goku.jpeg',
+                  'assets/images/naruto.jpeg',
+                  'assets/images/ichigo.jpeg',
+                  'assets/images/luggy.jpeg',
+                  'assets/images/goat.jpeg'
+                ];
+                return Padding(
+                  padding: EdgeInsets.all(8),
+                  child: ListTile(
+                    subtitle: Text('Hello reply me?'),
+                    leading: CircleAvatar(
+                      backgroundImage: AssetImage(images[index]),
+                    ),
+                    title: Text('Gojo Saturo'),
+                    trailing: Icon(Icons.delete),
+                  ),
+                );
+              },
+              itemCount: 6,
+            )));
   }
 }
