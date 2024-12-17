@@ -775,68 +775,131 @@ class _MyHomePageState extends State<MyHomePage> {
         ///
         ///
 
-        body: Container(
-            color: Colors.blue.shade100,
-            child: Center(
-              child: Column(
-                children: [
-                  TextField(
-                    keyboardType: TextInputType.number,
-                    controller: no1controller,
-                  ),
-                  TextField(
-                    controller: no2Controller,
-                    keyboardType: TextInputType.number,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      ElevatedButton(
-                          onPressed: () {
-                            var num1 = int.parse(no1controller.text.toString());
-                            var num2 = int.parse(no2Controller.text.toString());
-                            var sum = num1 + num2;
-                            result = 'The reuslt is  $sum';
-                            setState(() {});
-                          },
-                          child: Text('Add')),
-                      ElevatedButton(
-                          onPressed: () {
-                            var num1 = int.parse(no1controller.text.toString());
-                            var num2 = int.parse(no2Controller.text.toString());
-                            var sum = num1 - num2;
-                            result = 'The reuslt is  $sum';
-                            setState(() {});
-                          },
-                          child: Text('Sub')),
-                      ElevatedButton(
-                          onPressed: () {
-                            var num1 = int.parse(no1controller.text.toString());
-                            var num2 = int.parse(no2Controller.text.toString());
-                            var sum = num1 * num2;
-                            result = 'The reuslt is  $sum';
-                            setState(() {});
-                          },
-                          child: Text('Mul')),
-                      ElevatedButton(
-                          onPressed: () {
-                            var num1 = int.parse(no1controller.text.toString());
-                            var num2 = int.parse(no2Controller.text.toString());
-                            var sum = num1 / num2;
-                            result = 'The reuslt is  $sum';
-                            setState(() {});
-                          },
-                          child: Text('Div')),
-                    ],
-                  ),
-                  Text(
-                    result,
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                  )
-                ],
-              ),
-            ))
+        // body: Container(
+        //     color: Colors.blue.shade100,
+        //     child: Center(
+        //       child: Column(
+        //         children: [
+        //           TextField(
+        //             keyboardType: TextInputType.number,
+        //             controller: no1controller,
+        //           ),
+        //           TextField(
+        //             controller: no2Controller,
+        //             keyboardType: TextInputType.number,
+        //           ),
+        //           Row(
+        //             mainAxisAlignment: MainAxisAlignment.center,
+        //             crossAxisAlignment: CrossAxisAlignment.center,
+        //             children: [
+        //               ElevatedButton(
+        //                   onPressed: () {
+        //                     var num1 = int.parse(no1controller.text.toString());
+        //                     var num2 = int.parse(no2Controller.text.toString());
+        //                     var sum = num1 + num2;
+        //                     result = 'The reuslt is  $sum';
+        //                     setState(() {});
+        //                   },
+        //                   child: Text('Add')),
+        //               ElevatedButton(
+        //                   onPressed: () {
+        //                     var num1 = int.parse(no1controller.text.toString());
+        //                     var num2 = int.parse(no2Controller.text.toString());
+        //                     var sum = num1 - num2;
+        //                     result = 'The reuslt is  $sum';
+        //                     setState(() {});
+        //                   },
+        //                   child: Text('Sub')),
+        //               ElevatedButton(
+        //                   onPressed: () {
+        //                     var num1 = int.parse(no1controller.text.toString());
+        //                     var num2 = int.parse(no2Controller.text.toString());
+        //                     var sum = num1 * num2;
+        //                     result = 'The reuslt is  $sum';
+        //                     setState(() {});
+        //                   },
+        //                   child: Text('Mul')),
+        //               ElevatedButton(
+        //                   onPressed: () {
+        //                     var num1 = int.parse(no1controller.text.toString());
+        //                     var num2 = int.parse(no2Controller.text.toString());
+        //                     var sum = num1 / num2;
+        //                     result = 'The reuslt is  $sum';
+        //                     setState(() {});
+        //                   },
+        //                   child: Text('Div')),
+        //             ],
+        //           ),
+        //           Text(
+        //             result,
+        //             style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+        //           )
+        //         ],
+        //       ),
+        //     ))
+        //
+        //
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///Mapping list to Widget
+
+        // body: Container(
+        //   child: ListView(
+        //     children: arrNames.map((value) {
+        //       return Padding(
+        //         padding: EdgeInsets.all(8),
+        //         child: Container(
+        //           decoration: BoxDecoration(
+        //               borderRadius: BorderRadius.circular(21),
+        //               color: Colors.blue.shade100),
+        //           child: Padding(
+        //             padding: EdgeInsets.all(8),
+        //             child: Center(child: Text(value)),
+        //           ),
+        //         ),
+        //       );
+        //     }).toList(),
+        //   ),
+        // )
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///         Constraint Box
+        ///
+        ///
+        body: ConstrainedBox(
+          constraints: BoxConstraints(maxWidth: 200, maxHeight: 200),
+          child: Text(
+            'HEllo world HEllo world HEllo world HEllo world HEllo world HEllo worldHEllo world HEllo world HEllo world HEllo world',
+            style: TextStyle(fontSize: 21, overflow: TextOverflow.fade),
+          ),
+        )
 
         //
         );
