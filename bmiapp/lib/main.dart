@@ -42,7 +42,11 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.indigo,
-          title: Text(widget.title),
+          title: Center(
+              child: Text(
+            widget.title,
+            style: TextStyle(color: Colors.white),
+          )),
         ),
         body: Container(
             color: bgColor ?? Colors.indigo.shade200,
@@ -101,12 +105,22 @@ class _MyHomePageState extends State<MyHomePage> {
                               var tCm = tInch * 2.54;
                               var tM = tCm / 100;
                               var bmi = iWt / (tM * tM);
+                              var msg = "";
 
-                              if (bmi > 25) {}
+                              if (bmi > 25) {
+                                msg = "You're OverWeight!!!";
+                                bgColor = Colors.orange.shade200;
+                              } else if (bmi < 18) {
+                                msg = "You're UnderWeight!!!";
+                                bgColor = Colors.red.shade200;
+                              } else {
+                                msg = "You are Health!!";
+                                bgColor = Colors.green.shade200;
+                              }
 
                               setState(() {
                                 result =
-                                    'Your BMI is ${bmi.toStringAsFixed(2)}';
+                                    '$msg \nYour BMI is ${bmi.toStringAsFixed(2)}';
                               });
                             } else {
                               setState(() {
