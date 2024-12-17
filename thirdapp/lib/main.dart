@@ -37,6 +37,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  var result = "";
+  var no1controller = TextEditingController();
+  var no2Controller = TextEditingController();
   callback() {
     print('Clicked');
   }
@@ -58,6 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
       'Hassan',
       'Salaudin'
     ];
+
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.black,
@@ -771,7 +775,68 @@ class _MyHomePageState extends State<MyHomePage> {
         ///
         ///
 
-        body: Text('Hello')
+        body: Container(
+            color: Colors.blue.shade100,
+            child: Center(
+              child: Column(
+                children: [
+                  TextField(
+                    keyboardType: TextInputType.number,
+                    controller: no1controller,
+                  ),
+                  TextField(
+                    controller: no2Controller,
+                    keyboardType: TextInputType.number,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      ElevatedButton(
+                          onPressed: () {
+                            var num1 = int.parse(no1controller.text.toString());
+                            var num2 = int.parse(no2Controller.text.toString());
+                            var sum = num1 + num2;
+                            result = 'The reuslt is  $sum';
+                            setState(() {});
+                          },
+                          child: Text('Add')),
+                      ElevatedButton(
+                          onPressed: () {
+                            var num1 = int.parse(no1controller.text.toString());
+                            var num2 = int.parse(no2Controller.text.toString());
+                            var sum = num1 - num2;
+                            result = 'The reuslt is  $sum';
+                            setState(() {});
+                          },
+                          child: Text('Sub')),
+                      ElevatedButton(
+                          onPressed: () {
+                            var num1 = int.parse(no1controller.text.toString());
+                            var num2 = int.parse(no2Controller.text.toString());
+                            var sum = num1 * num2;
+                            result = 'The reuslt is  $sum';
+                            setState(() {});
+                          },
+                          child: Text('Mul')),
+                      ElevatedButton(
+                          onPressed: () {
+                            var num1 = int.parse(no1controller.text.toString());
+                            var num2 = int.parse(no2Controller.text.toString());
+                            var sum = num1 / num2;
+                            result = 'The reuslt is  $sum';
+                            setState(() {});
+                          },
+                          child: Text('Div')),
+                    ],
+                  ),
+                  Text(
+                    result,
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+            ))
 
         //
         );
