@@ -907,6 +907,8 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class CatItems extends StatelessWidget {
+  const CatItems({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -929,6 +931,8 @@ class CatItems extends StatelessWidget {
 }
 
 class Messages extends StatelessWidget {
+  const Messages({super.key});
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

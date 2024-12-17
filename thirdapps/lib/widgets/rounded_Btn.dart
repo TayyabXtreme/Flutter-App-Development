@@ -7,8 +7,9 @@ class RoundedBtn extends StatelessWidget {
   final VoidCallback? callback;
   final TextStyle? textStyle;
 
-  RoundedBtn(
-      {required this.btname,
+  const RoundedBtn(
+      {super.key,
+      required this.btname,
       this.icon,
       this.bgcolor = Colors.blue,
       this.callback,
