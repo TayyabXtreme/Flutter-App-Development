@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:forthapp/introPage.dart';
+import 'package:forthapp/profileScreen.dart';
 import 'package:forthapp/splashScreen.dart';
 
 void main() {
@@ -33,6 +35,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  var namecontroller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,6 +47,28 @@ class _MyHomePageState extends State<MyHomePage> {
             style: TextStyle(color: Colors.white),
           )),
         ),
-        body: Text('Hello world'));
+        body: Center(
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text('Dashboard Screen'),
+            TextField(
+              controller: namecontroller,
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            Profilescreen(namecontroller.text.toString()),
+                      ));
+                },
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue.shade300),
+                child: Text('My Profile'))
+          ],
+        )));
   }
 }
