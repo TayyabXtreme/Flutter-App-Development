@@ -30,6 +30,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  var myopacity = 1.0;
   var _width = 200.0;
   var _height = 100.0;
   var a = 1;
@@ -53,31 +54,56 @@ class _MyHomePageState extends State<MyHomePage> {
         //
         //
 
+        // body: Center(
+        //     child: Column(
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //   crossAxisAlignment: CrossAxisAlignment.center,
+        //   children: [
+        //     AnimatedContainer(
+        //       duration: Duration(seconds: 2),
+        //       width: _width,
+        //       height: _height,
+        //       color: Colors.grey,
+        //     ),
+        //     ElevatedButton(
+        //         onPressed: () {
+        //           if (a == 1) {
+        //             _width = 100.0;
+        //             _height = 200.0;
+        //             a = 0;
+        //           } else {
+        //             _width = 200.0;
+        //             _height = 100.0;
+        //             a = 1;
+        //           }
+        //           setState(() {});
+        //         },
+        //         child: Text('Animate'))
+        //   ],
+        // ))
+        //
+        //
+        //
+
         body: Center(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            AnimatedContainer(
-              duration: Duration(seconds: 2),
-              width: _width,
-              height: _height,
-              color: Colors.grey,
-            ),
+            AnimatedOpacity(
+                opacity: myopacity,
+                duration: Duration(seconds: 2),
+                child: Container(width: 100, height: 100, color: Colors.blue)),
             ElevatedButton(
                 onPressed: () {
-                  if (a == 1) {
-                    _width = 100.0;
-                    _height = 200.0;
-                    a = 0;
+                  if (myopacity == 1.0) {
+                    myopacity = 0.0;
                   } else {
-                    _width = 200.0;
-                    _height = 100.0;
-                    a = 1;
+                    myopacity = 1.0;
                   }
                   setState(() {});
                 },
-                child: Text('Animate'))
+                child: Text('Animated'))
           ],
         )));
   }
