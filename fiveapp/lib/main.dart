@@ -49,7 +49,14 @@ class _MyHomePageState extends State<MyHomePage> {
           )),
         ),
         body: Container(
-            color: bgColor ?? Colors.indigo.shade200,
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    colors: [
+                  Color(0xfffed6e3),
+                  Color(0xff330867),
+                ],
+                    begin: FractionalOffset(1.0, 0.0),
+                    end: FractionalOffset(0.0, 1.0))),
             child: Center(
                 child: SizedBox(
                     width: 300,
