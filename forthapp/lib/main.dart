@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       context,
                       MaterialPageRoute(
                         builder: (context) =>
-                            Profilescreen(namecontroller.text.toString()),
+                            ProfileScreen(namecontroller.text.toString()),
                       ));
                 },
                 style: ElevatedButton.styleFrom(
