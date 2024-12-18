@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:thirdapp/widgets/rounded_Btn.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(const MyApp());
