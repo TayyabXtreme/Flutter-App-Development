@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatefulWidget {
   final String names; // Changed type to String for better usage.
-  ProfileScreen(this.names);
+  const ProfileScreen(this.names, {super.key});
 
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();

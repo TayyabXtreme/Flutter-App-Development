@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:forthapp/introPage.dart';
 import 'package:forthapp/profileScreen.dart';
 import 'package:forthapp/splashScreen.dart';
 

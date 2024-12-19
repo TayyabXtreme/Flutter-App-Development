@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:forthapp/introPage.dart';
 
 class SplashScrren extends StatefulWidget {
+  const SplashScrren({super.key});
+
   @override
   State<StatefulWidget> createState() => _SplashScreenState();
 }
@@ -18,6 +20,7 @@ class _SplashScreenState extends State<SplashScrren> {
     });
   }
 
+  @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
