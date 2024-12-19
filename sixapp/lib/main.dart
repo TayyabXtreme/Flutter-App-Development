@@ -30,13 +30,30 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<MyHomePage>
+    with SingleTickerProviderStateMixin {
   var myopacity = 1.0;
   final _width = 200.0;
+  late Animation animation;
+  late AnimationController aniamtionController;
+
   final _height = 100.0;
   bool first = true;
   var a = 1;
   @override
+  void initState() {
+    super.initState();
+    aniamtionController =
+        AnimationController(vsync: this, duration: Duration(seconds: 4));
+    animation = Tween(begin: .0, end: 200.0).animate(aniamtionController);
+
+    aniamtionController.addListener(() {
+      print(animation);
+
+      aniamtionController.forward();
+    });
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
@@ -152,11 +169,16 @@ class _MyHomePageState extends State<MyHomePage> {
         //   ),
         // ),
 
-        body: ListWheelScrollView(itemExtent: 100, children: [
-          Container(width: 200, color: Colors.black),
-          Container(width: 200, color: Colors.green),
-          Container(width: 200, color: Colors.orange),
-          Container(width: 200, color: Colors.blue)
-        ]));
+        // body: ListWheelScrollView(itemExtent: 100, children: [
+        //   Container(width: 200, color: Colors.black),
+        //   Container(width: 200, color: Colors.green),
+        //   Container(width: 200, color: Colors.orange),
+        //   Container(width: 200, color: Colors.blue)
+        // ])
+        //
+        //
+        //
+
+        body: Center(child: Container()));
   }
 }
