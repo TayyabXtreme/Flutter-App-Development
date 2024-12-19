@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sixapp/detialedpage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -114,22 +115,42 @@ class _MyHomePageState extends State<MyHomePage> {
       //
       //
 
-      body: Center(
-          child: Column(children: [
-        AnimatedCrossFade(
-            firstChild:
-                Container(width: 200, height: 300, color: Colors.orange),
-            secondChild: Container(width: 200, height: 300, color: Colors.red),
-            crossFadeState:
-                first ? CrossFadeState.showFirst : CrossFadeState.showSecond,
-            duration: Duration(seconds: 3)),
-        ElevatedButton(
-            onPressed: () {
-              first = !first;
-              setState(() {});
-            },
-            child: Text('Change'))
-      ])),
+      // body: Center(
+      //     child: Column(children: [
+      //   AnimatedCrossFade(
+      //       firstChild:
+      //           Container(width: 200, height: 300, color: Colors.orange),
+      //       secondChild: Container(width: 200, height: 300, color: Colors.red),
+      //       crossFadeState:
+      //           first ? CrossFadeState.showFirst : CrossFadeState.showSecond,
+      //       duration: Duration(seconds: 3)),
+      //   ElevatedButton(
+      //       onPressed: () {
+      //         first = !first;
+      //         setState(() {});
+      //       },
+      //       child: Text('Change'))
+      // ])),
+
+      body: Container(
+        child: Center(
+          child: InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Detialedpage(),
+                    ));
+              },
+              child: Hero(
+                  tag: 'background',
+                  child: Image.asset(
+                    'assets/images/goat.jpeg',
+                    width: 150,
+                    height: 150,
+                  ))),
+        ),
+      ),
     );
   }
 }
