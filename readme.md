@@ -135,8 +135,3 @@ A fully functional BMI calculator demonstrating Flutter widgets and state manage
 
 Contributions are welcome! Feel free to open an issue or submit a pull request to enhance the content.
 
----
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
