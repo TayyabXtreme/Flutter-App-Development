@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:forthapp/main.dart';
+import 'package:lastapppractice/loginPage.dart';
+import 'package:lastapppractice/main.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Intropage extends StatelessWidget {
   const Intropage({super.key});
@@ -25,10 +27,14 @@ class Intropage extends StatelessWidget {
           ),
           ElevatedButton(
               style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(
+              onPressed: () async {
+                var prefs = await SharedPreferences.getInstance();
+                var account = prefs.getString('account');
+                Navigator.pushReplacement(context, MaterialPageRoute(
                   builder: (context) {
-                    return MyHomePage(title: 'HomePage');
+                    return account == "tayyab@gmail.com123123"
+                        ? MyHomePage(title: 'Tayyab')
+                        : Loginpage();
                   },
                 ));
               },
