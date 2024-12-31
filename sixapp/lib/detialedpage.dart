@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:sixapp/main.dart';
 
 class Detialedpage extends StatelessWidget {
+  const Detialedpage({super.key});
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

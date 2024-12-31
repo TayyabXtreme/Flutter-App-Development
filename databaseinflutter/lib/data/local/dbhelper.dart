@@ -46,4 +46,22 @@ class DBHelper {
       columns: [COLUMN_NOTE_SNO, COLUMN_NOTE_TITLE, COLUMN_NOTE_DESC],
     );
   }
+
+  Future<bool> updateNode(
+      {required String mTitle, required String mDesc, required int sno}) async {
+    var db = await getDB();
+
+    int rowsEffected = await db.update(
+        TABLE_NOTE, {COLUMN_NOTE_TITLE: mTitle, COLUMN_NOTE_DESC: mDesc},
+        where: "$COLUMN_NOTE_SNO = $sno");
+    return (rowsEffected > 0);
+  }
+
+  Future<bool> deleteNode({required int sno}) async {
+    var db = await getDB();
+    int rowsEffected = await db
+        .delete(TABLE_NOTE, where: '$COLUMN_NOTE_SNO = ?', whereArgs: ['$sno']);
+
+    return (rowsEffected > 0);
+  }
 }

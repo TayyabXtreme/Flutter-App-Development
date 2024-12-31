@@ -3,6 +3,8 @@ import 'package:lastapppractice/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Loginpage extends StatefulWidget {
+  const Loginpage({super.key});
+
   @override
   State<StatefulWidget> createState() => LoginPageState();
 }
@@ -29,7 +31,7 @@ class LoginPageState extends State<Loginpage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Container(
+                        SizedBox(
                             width: 200,
                             height: 80,
                             child: CircleAvatar(
