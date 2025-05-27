@@ -1,0 +1,2 @@
+export const supabaseUrl='https://uhkcnvizhzwvdwvmdejs.supabase.co'
+export const supabaseAnonKey='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVoa2Nudml6aHp3dmR3dm1kZWpzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjkzMjAwNjUsImV4cCI6MjA0NDg5NjA2NX0.uwo-VoGH2ncLsgZHkie-LJVu46weq1InEVzYjYC7tYI'
